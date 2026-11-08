@@ -104,11 +104,11 @@ export default function RunwayLayout({ style }: RunwayLayoutProps) {
             }}
           >
             <svg
-              viewBox="0 0 350 300"
+              viewBox="0 0 350 380"
               style={{
                 width: "100%",
                 height: "auto",
-                maxHeight: "260px",
+                maxHeight: "310px",
                 overflow: "visible",
               }}
             >
@@ -163,7 +163,7 @@ export default function RunwayLayout({ style }: RunwayLayoutProps) {
               </defs>
 
               {/* Background radar circles */}
-              <rect width="350" height="300" fill="url(#radar-bg-lg)" rx="6" />
+              <rect width="350" height="380" fill="url(#radar-bg-lg)" rx="6" />
               <circle cx="175" cy="150" r="60" fill="none" stroke="#1e293b" strokeWidth="1" strokeDasharray="3 3" />
               <circle cx="175" cy="150" r="110" fill="none" stroke="#1e293b" strokeWidth="1" strokeDasharray="3 3" />
 
@@ -181,17 +181,17 @@ export default function RunwayLayout({ style }: RunwayLayoutProps) {
 
               {/* Approach to 11 (from WNW 114° heading) */}
               <line
-                x1="32"
-                y1="68"
-                x2="84"
-                y2="92"
+                x1="10"
+                y1="78"
+                x2="53"
+                y2="97"
                 stroke="#38bdf8"
                 strokeWidth="2.5"
                 strokeDasharray="5 3"
                 markerEnd="url(#arrow-app-11)"
               />
               {/* Approach 11 Label Badge */}
-              <g transform="translate(32, 60)">
+              <g transform="translate(24, 60)">
                 <rect x="-26" y="-11" width="52" height="20" rx="4" fill="#0369a1" stroke="#38bdf8" strokeWidth="1.2" />
                 <text x="0" y="3" textAnchor="middle" fill="#ffffff" fontSize="10" fontWeight="800" fontFamily="system-ui">
                   APP 11
@@ -202,18 +202,8 @@ export default function RunwayLayout({ style }: RunwayLayoutProps) {
               </g>
 
               {/* Approach to 29 (from ESE 294° heading) */}
-              <line
-                x1="298"
-                y1="188"
-                x2="246"
-                y2="164"
-                stroke="#38bdf8"
-                strokeWidth="2.5"
-                strokeDasharray="5 3"
-                markerEnd="url(#arrow-app-29)"
-              />
               {/* Approach 29 Label Badge */}
-              <g transform="translate(298, 196)">
+              <g transform="translate(340, 220)">
                 <rect x="-26" y="-11" width="52" height="20" rx="4" fill="#0369a1" stroke="#38bdf8" strokeWidth="1.2" />
                 <text x="0" y="3" textAnchor="middle" fill="#ffffff" fontSize="10" fontWeight="800" fontFamily="system-ui">
                   APP 29
@@ -229,17 +219,17 @@ export default function RunwayLayout({ style }: RunwayLayoutProps) {
 
               {/* Approach to 16 (from NNW 163° heading) */}
               <line
-                x1="110"
-                y1="28"
-                x2="124"
-                y2="70"
+                x1="224"
+                y1="70"
+                x2="235"
+                y2="106"
                 stroke="#38bdf8"
                 strokeWidth="2.5"
                 strokeDasharray="5 3"
                 markerEnd="url(#arrow-app-16)"
               />
               {/* Approach 16 Label Badge */}
-              <g transform="translate(108, 18)">
+              <g transform="translate(207, 50)">
                 <rect x="-26" y="-11" width="52" height="20" rx="4" fill="#0369a1" stroke="#38bdf8" strokeWidth="1.2" />
                 <text x="0" y="3" textAnchor="middle" fill="#ffffff" fontSize="10" fontWeight="800" fontFamily="system-ui">
                   APP 16
@@ -251,17 +241,17 @@ export default function RunwayLayout({ style }: RunwayLayoutProps) {
 
               {/* Approach to 34 (from SSE 343° heading) */}
               <line
-                x1="188"
-                y1="272"
-                x2="174"
-                y2="230"
+                x1="300"
+                y1="330"
+                x2="289"
+                y2="294"
                 stroke="#38bdf8"
                 strokeWidth="2.5"
                 strokeDasharray="5 3"
                 markerEnd="url(#arrow-app-34)"
               />
               {/* Approach 34 Label Badge */}
-              <g transform="translate(190, 280)">
+              <g transform="translate(311, 349)">
                 <rect x="-26" y="-11" width="52" height="20" rx="4" fill="#0369a1" stroke="#38bdf8" strokeWidth="1.2" />
                 <text x="0" y="3" textAnchor="middle" fill="#ffffff" fontSize="10" fontWeight="800" fontFamily="system-ui">
                   APP 34
@@ -275,64 +265,76 @@ export default function RunwayLayout({ style }: RunwayLayoutProps) {
               {/* PHYSICAL RUNWAY ASPHALT STRIPS                             */}
               {/* ────────────────────────────────────────────────────────── */}
 
-              {/* RWY 11/29 Asphalt Strip */}
+              {/* RWY 11/29, west of the separate RWY 16/34 strip */}
               <line
-                x1="86"
-                y1="94"
-                x2="242"
-                y2="162"
+                x1="66"
+                y1="102"
+                x2="222"
+                y2="168"
                 stroke="#1e293b"
                 strokeWidth="16"
                 strokeLinecap="butt"
               />
               <line
-                x1="86"
-                y1="94"
-                x2="242"
-                y2="162"
+                x1="66"
+                y1="102"
+                x2="222"
+                y2="168"
                 stroke="#334155"
                 strokeWidth="13"
                 strokeLinecap="butt"
               />
               {/* RWY 11/29 White Centerline */}
               <line
-                x1="92"
-                y1="97"
-                x2="236"
-                y2="159"
+                x1="66"
+                y1="102"
+                x2="222"
+                y2="168"
                 stroke="#ffffff"
                 strokeWidth="1.8"
                 strokeDasharray="6 4"
               />
 
-              {/* RWY 16/34 Asphalt Strip */}
+              {/* RWY 16/34 is displaced east and does not meet RWY 11/29. */}
               <line
-                x1="126"
-                y1="76"
-                x2="172"
-                y2="224"
+                x1="239"
+                y1="120"
+                x2="284"
+                y2="277"
                 stroke="#1e293b"
                 strokeWidth="16"
                 strokeLinecap="butt"
               />
               <line
-                x1="126"
-                y1="76"
-                x2="172"
-                y2="224"
+                x1="239"
+                y1="120"
+                x2="284"
+                y2="277"
                 stroke="#334155"
                 strokeWidth="13"
                 strokeLinecap="butt"
               />
               {/* RWY 16/34 White Centerline */}
               <line
-                x1="128"
-                y1="84"
-                x2="170"
-                y2="216"
+                x1="239"
+                y1="120"
+                x2="284"
+                y2="277"
                 stroke="#ffffff"
                 strokeWidth="1.8"
                 strokeDasharray="6 4"
+              />
+
+              {/* Draw APP 29 above the runway strip so its arrowhead remains visible. */}
+              <line
+                x1="300"
+                y1="203"
+                x2="235"
+                y2="175"
+                stroke="#38bdf8"
+                strokeWidth="2.5"
+                strokeDasharray="5 3"
+                markerEnd="url(#arrow-app-29)"
               />
 
               {/* ────────────────────────────────────────────────────────── */}
@@ -340,7 +342,7 @@ export default function RunwayLayout({ style }: RunwayLayoutProps) {
               {/* ────────────────────────────────────────────────────────── */}
 
               {/* RWY 11 Threshold Marker */}
-              <g transform="translate(98, 83)">
+              <g transform="translate(66, 102) rotate(113)">
                 <rect x="-9" y="-7" width="18" height="14" rx="2" fill="#0f172a" stroke="#f97316" strokeWidth="1.2" />
                 <text x="0" y="3.5" textAnchor="middle" fill="#f97316" fontSize="10" fontWeight="900" fontFamily="monospace">
                   11
@@ -348,7 +350,7 @@ export default function RunwayLayout({ style }: RunwayLayoutProps) {
               </g>
 
               {/* RWY 29 Threshold Marker */}
-              <g transform="translate(230, 173)">
+              <g transform="translate(222, 168) rotate(293)">
                 <rect x="-9" y="-7" width="18" height="14" rx="2" fill="#0f172a" stroke="#f97316" strokeWidth="1.2" />
                 <text x="0" y="3.5" textAnchor="middle" fill="#f97316" fontSize="10" fontWeight="900" fontFamily="monospace">
                   29
@@ -356,7 +358,7 @@ export default function RunwayLayout({ style }: RunwayLayoutProps) {
               </g>
 
               {/* RWY 16 Threshold Marker */}
-              <g transform="translate(140, 81)">
+              <g transform="translate(239, 120) rotate(164)">
                 <rect x="-9" y="-7" width="18" height="14" rx="2" fill="#0f172a" stroke="#f97316" strokeWidth="1.2" />
                 <text x="0" y="3.5" textAnchor="middle" fill="#f97316" fontSize="10" fontWeight="900" fontFamily="monospace">
                   16
@@ -364,7 +366,7 @@ export default function RunwayLayout({ style }: RunwayLayoutProps) {
               </g>
 
               {/* RWY 34 Threshold Marker */}
-              <g transform="translate(158, 218)">
+              <g transform="translate(284, 277) rotate(344)">
                 <rect x="-9" y="-7" width="18" height="14" rx="2" fill="#0f172a" stroke="#f97316" strokeWidth="1.2" />
                 <text x="0" y="3.5" textAnchor="middle" fill="#f97316" fontSize="10" fontWeight="900" fontFamily="monospace">
                   34
