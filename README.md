@@ -4,6 +4,8 @@ A high-performance, real-time flight tracking dashboard and runway approach moni
 
 The system combines live ADS-B state vectors from the OpenSky Network, automatic aircraft metadata resolution, offline regional map tile serving, and an in-browser geometric vector engine that tracks and calculates aircraft approach status across all active runways in real time without external API overhead.
 
+![Aircraft on Approach dashboard showing the Vienna airspace map and runway layout](images/main-page.png)
+
 ---
 
 ## Key Features
@@ -32,7 +34,7 @@ The system combines live ADS-B state vectors from the OpenSky Network, automatic
 
 ### 3. Glassmorphism HUD Overlays
 - **Runway Layout Visual HUD (Top-Right)**:
-  - SVG schematic of intersecting runways `11/29` (3,500 m) and `16/34` (3,600 m).
+  - SVG schematic of east-offset, non-intersecting runways `11/29` (3,500 m) and `16/34` (3,600 m).
   - Threshold runway identifiers, magnetic bearings, extended approach paths, and compass North rose.
 - **Approach Radar HUD (Top-Right)**:
   - Runway filter controls (`ALL`, `11`, `29`, `16`, `34`) with active aircraft count badges.
