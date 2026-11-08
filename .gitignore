@@ -1,0 +1,13 @@
+.idea
+.next
+.qodo
+.junie
+__pycache__
+node_modules
+public
+
+old*
+
+*.ts
+*.tsbuildinfo
+package-lock.json
